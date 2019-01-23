@@ -1,0 +1,14 @@
+ public int maximumProduct(int[] nums) {
+	    int i,sum,temp;
+	    i=0;
+	    sum=temp=1;
+	    Arrays.sort(nums);
+	    while(i<3) {
+	    	sum*=nums[nums.length-i-1];
+	    	i++;
+	    	
+	    }
+        temp=nums[0]*nums[1]*nums[nums.length-1];
+        
+	    return sum>temp?sum:temp;
+	}

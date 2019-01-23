@@ -1,0 +1,19 @@
+public int dominantIndex(int[] nums) {
+        int i,max,j,index;
+        i=j=index=0;
+        max=nums[0];
+        while(i<nums.length) {
+            if(nums[i]>max){
+                max=nums[i];
+                index=i;
+            }
+            i++;
+        }
+        i=0;
+        while(i<nums.length) {
+            if(max-nums[i]>=nums[i]) j++;
+            i++;
+        }
+        if(j==nums.length-1) return index;
+        return -1;
+    }
