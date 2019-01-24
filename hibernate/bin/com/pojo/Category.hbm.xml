@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2019??1??24?? ????10:10:13 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="com.pojo.Product" table="PRODUCT_">
+    <class name="com.pojo.Category" table="CATEGORY_">
         <id name="id" type="int">
             <column name="ID" />
             <generator class="assigned" />
@@ -11,11 +11,5 @@
         <property name="name" type="java.lang.String">
             <column name="NAME" />
         </property>
-        <property name="price" type="float">
-            <column name="PRICE" />
-        </property>
-        <many-to-one name="category" class="com.pojo.Category" fetch="join">
-            <column name="Cid" />
-        </many-to-one>
     </class>
 </hibernate-mapping>

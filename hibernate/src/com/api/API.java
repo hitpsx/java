@@ -1,4 +1,6 @@
-package com.pojo;
+package com.api;
+
+import com.pojo.Product;
 
 public interface API {
 	public int getMainId(String name);
